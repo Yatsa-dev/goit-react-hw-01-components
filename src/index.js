@@ -6,6 +6,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />, document.querySelector('#root')
+    <App />
   </React.StrictMode>,
+  document.querySelector('#root'),
 );

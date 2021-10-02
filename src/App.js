@@ -1,18 +1,19 @@
 // import "./App.css";
-import Profile from './components/Profile';
+import Profile from './components/task-1/Profile';
+import Statistics from './components/task-2/Statistics';
 import user from './API/user.json';
+import statisticalData from './API/statistical-data.json';
 function App() {
   return (
     <div>
       <Profile
-        image={user.avatar}
-        title={user.name}
+        avatar={user.avatar}
+        name={user.name}
         tag={user.tag}
         location={user.location}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
+      <Statistics title="Upload stats" stats={statisticalData} />
     </div>
   );
 }
