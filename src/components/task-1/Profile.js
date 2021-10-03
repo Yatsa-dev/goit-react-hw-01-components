@@ -1,36 +1,35 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default function Profile({ avatar, name, tag, location, stats }) {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="Аватар пользователя" class="avatar" />
-        <p class="name">{name}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
+    <div>
+      <div>
+        <img src={avatar} alt="Аватар пользователя" />
+        <p>{name}</p>
+        <p>{tag}</p>
+        <p>{location}</p>
       </div>
-
-      <ul class="stats">
+      <ul>
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
+          <span>Followers</span>
+          <span>{stats.followers}</span>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+          <span>Views</span>
+          <span>{stats.views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
+          <span>Likes</span>
+          <span>{stats.likes}</span>
         </li>
       </ul>
     </div>
   );
 }
 Profile.propTypes = {
-  avatar: propTypes.string,
-  name: propTypes.string,
-  tag: propTypes.string,
-  location: propTypes.string,
-  stats: propTypes.object,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.object,
 };
