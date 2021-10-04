@@ -1,8 +1,9 @@
 // import "./App.css";
-import Profile from './components/task-1/Profile';
-import Statistics from './components/task-2/Statistics';
-import FriendList from './components/task-3/FriendList';
-import TransactionHistory from './components/task-4/TransactionHistory';
+import Profile from './components/Profile/Profile';
+import Statistics from './components/Statistics/Statistics';
+import FriendList from './components/FriendList/FriendList';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import Container from 'components/Container/Container';
 
 import user from './API/user.json';
 import statisticalData from './API/statistical-data.json';
@@ -11,7 +12,7 @@ import transactions from './API/transactions.json';
 
 function App() {
   return (
-    <div>
+    <Container>
       <Profile
         avatar={user.avatar}
         name={user.name}
@@ -22,7 +23,7 @@ function App() {
       <Statistics title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </Container>
   );
 }
 
