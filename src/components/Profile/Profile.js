@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from '../Profile/Profile.module.css'
+import s from './Profile.module.css'
 
 export default function Profile({ avatar, name, tag, location, stats }) {
   return (
